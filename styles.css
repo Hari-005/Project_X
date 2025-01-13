@@ -1,0 +1,163 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background: #00264f;
+    color: #fff;
+    padding: 15px 0; /* Increased padding for better spacing */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px; /* Increased margin for better spacing */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px; /* Increased padding for better click area */
+    transition: background 0.3s, transform 0.3s;
+    border-radius: 5px; /* Added border-radius for rounded corners */
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 40px;
+    transition: transform 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    font-size: 2.5em; /* Increased font size for better visibility */
+    margin-bottom: 20px;
+    color: #007bff;
+    text-align: center; /* Centered the heading */
+}
+
+/* Card Styles */
+.news-card, .project-card, .tutorial-card, .forum-post, .job-listing, .marketplace-item, .event-listing {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-card h2, .project-card h2, .tutorial-card h2, .forum-post h2, .job-listing h2, .marketplace-item h2, .event-listing h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.news-card p, .project-card p, .tutorial-card p, .forum-post p, .job-listing p, .marketplace-item p, .event-listing p {
+    margin-bottom: 10px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3; /* Darker shade on hover */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px; /* Increased padding for better spacing */
+    background: #007bff;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px; /* Increased font size for better readability */
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0; /* Increased padding for social media icons */
+}
+
+.social-icon {
+    margin: 0 15px; /* Increased margin between icons */
+    color: #fff; /* Change color to white for better visibility */
+    font-size: 24px; /* Increased size for better visibility */
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em; /* Adjusted font size for smaller screens */
+    }
+
+    .btn {
+        padding: 8px 12px; /* Adjusted padding for buttons */
+    }
+
+    .social-icon {
+        font-size: 20px; /* Adjusted size for social media icons */
+    }
+}
