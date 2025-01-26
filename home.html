@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+    
     <header>
         <nav>
             <ul>
@@ -19,6 +20,7 @@
                 <li><a href="#jobs" aria-label="Go to Job Board">Jobs</a></li>
                 <li><a href="#marketplace" aria-label="Go to Tech Marketplace">Marketplace</a></li>
                 <li><a href="#events" aria-label="Go to Event Listings">Events</a></li>
+                <li><a href="about.html" aria-label="Go to Contact Us section">About</a></li>
                 <li><a href="#footer" aria-label="Go to Contact Us section">Contact</a></li>
             </ul>
         </nav>
@@ -169,9 +171,32 @@
                 </div>
             </div>
         </section>
+          <!-- Reviews Section -->
+    <div id="reviews" class="section">
+        <section class="reviews">
+            <h2>Client Reviews</h2>
+            <div class="review-list">
+                <!-- Existing reviews will be loaded here -->
+            </div>
+            <form id="review-form">
+                <h3>Leave a Review</h3>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <textarea id="review-text" placeholder="Your Review" required></textarea>
+                <select id="rating" required>
+                    <option value="">Select Rating</option>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                </select>
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+    </div>
     </main>
     <footer id="footer">
-        <p>&copy; 2023 Tech Hub. All rights reserved.</p>
+        <p>&copy; 2025 Tech Hub. All rights reserved.</p>
         <div class="social-media">
             <a href="https://www.facebook.com" target="_blank" class="social-icon" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.twitter.com" target="_blank" class="social-icon" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
@@ -179,5 +204,6 @@
             <a href="https://www.LinkedIn.com" target="_blank" class="social-icon" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>

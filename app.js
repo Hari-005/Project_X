@@ -33,10 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
 // API Key for News API
-const API_KEY = "your_api_key"; // Replace with your actual API key
-const newsUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
+const API_KEY = "c390639d30024063842e69ce0371c2a6"; // Replace with your actual API key
+const newsUrl = `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=c390639d30024063842e69ce0371c2a6`;
 
 // Fetch news articles
 async function fetchNews() {
@@ -54,15 +53,20 @@ function displayNews(articles) {
     const newsContainer = document.getElementById("news-container");
     newsContainer.innerHTML = ""; // Clear previous content
 
+    if (articles.length === 0) {
+        newsContainer.innerHTML = "<p>No news articles available.</p>";
+        return;
+    }
+
     articles.forEach(article => {
         const card = document.createElement("div");
-        card.classList.add("card");
+        card.classList.add("news-card");
         
         card.innerHTML = `
             <img src="${article.urlToImage}" alt="${article.title}" />
             <h2>${article.title}</h2>
             <p>${article.description}</p>
-            <a href="${article.url}" target="_blank">Read more</a>
+            <a href="${article.url}" target="_blank" class="btn">Read more</a>
         `;
         
         newsContainer.appendChild(card);
@@ -86,14 +90,19 @@ function displayProjects(projects) {
     const projectsContainer = document.getElementById("projects-container");
     projectsContainer.innerHTML = ""; // Clear previous content
 
+    if (projects.length === 0) {
+        projectsContainer.innerHTML = "<p>No projects available.</p>";
+        return;
+    }
+
     projects.forEach(project => {
         const card = document.createElement("div");
-        card.classList.add("card");
+        card.classList.add("project-card");
         
         card.innerHTML = `
             <h2>${project.name}</h2>
             <p>${project.description}</p>
-            <a href="${project.link}" target="_blank">View Project</a>
+            <a href="${project.link}" target="_blank" class="btn">View Project</a>
         `;
         
         projectsContainer.appendChild(card);
@@ -160,7 +169,38 @@ document.querySelector('#projects').addEventListener('click', () => {
     openModal('Here are some exciting projects from our community!');
 });
 
-// Initialize fetching on page load
-window.onload = () => {
-    fetchNews();
+// Add event listener to review form submit button
+document.getElementById('review-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var name = document.getElementById('name').value;
+    var reviewText = document.getElementById('review-text').value;
+    var rating = document.getElementById('rating').value;
+    
+    // Create a new review object
+    var review = {
+        name: name,
+        reviewText: reviewText,
+        rating: rating
+    };
+    
+    // Add the review to the review list
+    addReview(review);
+    
+    // Clear the form fields
+    document.getElementById('name').value = '';
+    document.getElementById('review-text').value = '';
+    document.getElementById('rating').value = '';
+});
+
+// Function to add a review to the review list
+function addReview(review) {
+    var reviewList = document.querySelector('.review-list');
+    var reviewHTML = `
+        <li>
+            <h3>${review .name}</h3>
+            <p>${review.reviewText}</p>
+            <p>Rating: ${review.rating} stars</p>
+        </li>
+    `;
+    reviewList.innerHTML += reviewHTML;
 }

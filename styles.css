@@ -161,3 +161,68 @@ footer {
         font-size: 20px; /* Adjusted size for social media icons */
     }
 }
+/* Reviews Section Styles */
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px; /* Added margin for spacing */
+}
+
+.reviews h2 {
+    color: #007bff; /* Changed to match the primary color */
+    text-align: center; /* Centered the heading */
+    margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.review-list {
+    background: #f9f9f9; /* Match the card background */
+    border: 1px solid #ddd; /* Match the card border */
+    border-radius: 8px; /* Match the card border radius */
+    padding: 20px;
+    margin: 10px; /* Adjusted margin for spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Match the card shadow */
+    width: calc(50% - 20px); /* Responsive width */
+}
+
+.review-list li {
+    margin-bottom: 1em; /* Space between reviews */
+}
+
+.review-list li:last-child {
+    margin-bottom: 0; /* No margin for the last item */
+}
+
+#review-form {
+    background: #f9f9f9; /* Match the card background */
+    border: 1px solid #ddd; /* Match the card border */
+    border-radius: 8px; /* Match the card border radius */
+    padding: 20px;
+    margin: 20px; /* Adjusted margin for spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Match the card shadow */
+}
+
+#review-form input, 
+#review-form textarea, 
+#review-form select {
+    width: 100%; /* Full width for inputs */
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Added border-radius for consistency */
+}
+
+#review-form button[type="submit"] {
+    background-color: #007bff; /* Match the primary button color */
+    color: #fff; /* White text for contrast */
+    border: none;
+    padding: 1em 2em;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px; /* Added border-radius for consistency */
+    transition: background 0.3s; /* Added transition for hover effect */
+}
+
+#review-form button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<section id="about-header">
+  <ul>
+    <li>
+        <h1>About Us</h1> 
+    </li>
+    <li>
+         <p>Welcome to the official website<strong></strong>, of <strong>TECH HUB </strong>. we believe in innovation and excellence.</p>
+
+    </li>
+  </ul>  
+</section>
+<section id="our-story">
+    <h2>Our Story</h2>
+    <p>Fstry. Our journey has been filled with challenges and triumphs, and we are proud of what we have achieved.</p>
+</section>
+
+<section id="team">
+    <h2>Meet Our Team</h2>
+    <div class="team-member">
+        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Team Member 1">
+        <h3>John Doe</h3>
+        <p>CEO and Founder</p>
+    </div>
+    <div class="team-member">
+        <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Team Member 2">
+        <h3>Jane Smith</h3>
+        <p>Chief Operating Officer</p>
+    </div>
+    <div class="team-member">
+        <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Team Member 3">
+        <h3>Mike Johnson</h3>
+        <p>Lead Developer</p>
+    </div>
+</section>
+
+<footer>
+    <h2>Connect with Us</h2>
+    <div class="social-media">
+        <a href="https://www.facebook.com" target="_blank" class="social-icon" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com" target="_blank" class="social-icon" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/hari_sree_2005?igsh=MTM1azAwOHViZzJzOQ==" target="_blank" class="social-icon" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com" target="_blank" class="social-icon" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+</footer>
+
+<script>
+    // Example JavaScript for dynamic content
+    document.addEventListener('DOMContentLoaded', function() {
+        const testimonials = [
+            { text: "Great service!", name: "Alice" },
+            { text: "Loved the products!", name: "Bob" }
+        ];
+
+        const testimonialSection = document.getElementById('testimonials');
+        testimonials.forEach(testimonial => {
+            const div = document.createElement('div');
+            div.className = 'testimonial';
+            div.innerHTML = `<p>"${testimonial.text}"</p><cite>- ${testimonial.name}</cite>`;
+            testimonialSection.appendChild(div);
+        });
+    });
+</script>
+
+</body>
+</html>
