@@ -79,3 +79,20 @@ ul {
 ul li {
     font-size: 25px;
 }
+#team {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center items horizontally */
+}
+
+.team-member {
+    margin: 10px 0; /* Add margin between team members */
+    text-align: center; /* Center text for each team member */
+}
+.our-story
+{
+        font-family: 'Montserrat', sans-serif; /* Change to Montserrat font */
+        font-size: 1.2em; /* Adjust font size as needed */
+        line-height: 2.5%; 
+        
+}

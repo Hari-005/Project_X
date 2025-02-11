@@ -23,13 +23,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Smooth scrolling for navigation links
     document.querySelectorAll('nav ul li a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+    
+            // Check if the link is an internal link (starts with #)
+            if (targetId.startsWith('#')) {
+                e.preventDefault(); // Prevent default behavior for internal links
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            } else {
+                // Allow default behavior for external links
+                window.location.href = targetId; // Navigate to the external page
+            }
         });
     });
 });

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Login</title>
+</head>
+<body>
+    <div class="login-box">
+        <div class="login-header">
+            <header>Login</header>
+        </div>
+        <div class="error-message" style="color:red;display:none;"></div>
+        <form action="your_login_endpoint" method="POST" id="loginForm">
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email or Username" aria-label="Email or Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="  password" class="input-field" placeholder="Password" aria-label="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="forgot">
+                <section>
+                    <input type="checkbox" id="check">
+                    <label for="check">Remember me</label>
+                </section>
+                <section>
+                    <a href="#">Forgot password</a>
+                </section>
+            </div>
+            <div class="input-submit">
+                <button type="submit" class="submit-btn" id="submit"></button>
+                <label for="submit">Sign In</label>
+            </div>
+        </form>
+        <div class="sign-up-link">
+            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
