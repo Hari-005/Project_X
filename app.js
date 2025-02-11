@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 // API Key for News API
-//const API_KEY = "c390639d30024063842e69ce0371c2a6"; // Replace with your actual API key
-//const newsUrl = `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=c390639d30024063842e69ce0371c2a6`;
+const API_KEY = "c390639d30024063842e69ce0371c2a6"; // Replace with your actual API key
+const newsUrl = `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=c390639d30024063842e69ce0371c2a6`;
 
 // Fetch news articles
 async function fetchNews() {
